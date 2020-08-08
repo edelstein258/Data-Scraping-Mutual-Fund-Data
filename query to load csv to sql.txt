@@ -1,0 +1,35 @@
+create table data (
+  `ISIN_code` varchar(20) DEFAULT NULL,
+  `date` date NOT NULL,
+  `price` float DEFAULT NULL,
+  `RSIdaily_14` float DEFAULT NULL,
+  `ZSCOREdaily_20` float DEFAULT NULL,
+  `ZSCOREdaily_200` float DEFAULT NULL,
+  `EMAdaily_20` float DEFAULT NULL,
+  `EMAdaily_50` float DEFAULT NULL,
+  `EMAdaily_200` float DEFAULT NULL,
+  `ZSCOREweekly_20` float DEFAULT NULL,
+  `ZSCOREweekly_200` float DEFAULT NULL,
+  `RSIweekly_14` float DEFAULT NULL,
+  `EMA_RSI14_weekly_20` float DEFAULT NULL,
+  `RSImonthly_14` float DEFAULT NULL,
+  `EMA_RSI14_monthly_20` float DEFAULT NULL,
+  `EW daily` float DEFAULT NULL,
+  `EW weekly` float DEFAULT NULL
+);
+
+
+LOAD DATA LOCAL INFILE '/home/ubuntu/workspace/mutualfund-data-downstream/final_aggregate v5.csv'
+INTO TABLE data
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+create table fund_data( Scheme_Name varchar(80), SD_AMC_Name varchar(50), SD_Scheme_AMFI_Name varchar(140), SD_Scheme_AMFI_Code	int, ISIN_code varchar(20), SD_Scheme_Type varchar(40), SD_Scheme_Option	 varchar(30), SD_Scheme_Asset_Type varchar(30), SD_Sub_Category varchar(50))
+
+LOAD DATA LOCAL INFILE '/home/ubuntu/workspace/mutualfund-data-downstream/fund_data.csv'
+INTO TABLE fund_data
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
