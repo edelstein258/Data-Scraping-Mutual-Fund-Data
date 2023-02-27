@@ -1,8 +1,8 @@
-# MutualFundProject
+# Data-Scraping-Mutual-Fund-Data
 Data Collection/Scraping,Data Manipulation and Real time Data Integration 
 
-### MutualFundProject
-The main noteebok MutualFundProject is a pipeline to process the Histroical Mutual fund price data in different CSV file.
+### Data-Scraping-Mutual-Fund-Data
+The main noteebok Data-Scraping-Mutual-Fund-Data is a pipeline to process the Histroical Mutual fund price data in different CSV file.
 -->It extracts the folders from zip/rar file.
 -->Combines all the excel to single CSV
 -->Calculates different Technical and Statistical Values
